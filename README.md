@@ -21,5 +21,4 @@ $ yarn generate
 
 ### Based on PokeAPI to fetch data
 - See documentation on [Pokeapi](https://pokeapi.co/docs/v2).
-- Add .env files to environment file
 - For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
