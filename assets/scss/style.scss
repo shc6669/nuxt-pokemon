@@ -1,0 +1,47 @@
+/*---------------------------
+ CSS Index  
+****************************
+/* Default  */
+
+@import'default/variables';
+@import'default/typography';
+@import'default/spacing';
+@import'default/mixins';
+@import'default/shortcode';
+@import'default/common';
+@import'default/animations';
+@import'default/text-animation';
+@import'default/sal';
+
+/* Header  */
+@import'header/header';
+@import'header/nav';
+@import'header/mobilemenu';
+@import'header/one-page';
+@import'header/notification';
+@import'header/mainheader';
+
+/* Elements  */
+@import'elements/button';
+@import'elements/backtotop';
+@import'elements/cursor';
+@import'elements/section-title';
+@import'elements/banner';
+@import'elements/service';
+@import'elements/author';
+@import'elements/collection';
+@import'elements/footer';
+@import'elements/copyright';
+@import'elements/product-details';
+@import'elements/swicher';
+@import'elements/social-share';
+@import'elements/modal';
+@import'elements/activity';
+@import'elements/masonryitem';
+@import'elements/breadcrumb';
+@import'elements/slick';
+@import'elements/ranking';
+@import'elements/notfound';
+@import'elements/edit-profile';
+@import'elements/savepopup';
+@import'elements/white-version';
