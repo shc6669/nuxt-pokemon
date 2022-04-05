@@ -208,9 +208,9 @@ body {
     button.another-login,
     .author-button-area .at-follw,
     .change-pass-wrapper input,
-    .tab-content-edit-wrapepr .nuron-information .profile-form-wrapper input,
-    .tab-content-edit-wrapepr .nuron-information .edit-bio-area textarea,
-    .nuron-information input {
+    .tab-content-edit-wrapepr .user-information .profile-form-wrapper input,
+    .tab-content-edit-wrapepr .user-information .edit-bio-area textarea,
+    .user-information input {
         background: var(--color-gray-2);
     }
 
@@ -281,9 +281,9 @@ body {
     .box-table,
     .left-header-style .authore-profile .thumbnail img,
     .hamberger button.hamberger-button,
-    .tab-content-edit-wrapepr .nuron-information .profile-form-wrapper input,
-    .tab-content-edit-wrapepr .nuron-information .edit-bio-area textarea,
-    .tab-content-edit-wrapepr .nuron-information .profile-change .profile-left .profile-image img {
+    .tab-content-edit-wrapepr .user-information .profile-form-wrapper input,
+    .tab-content-edit-wrapepr .user-information .edit-bio-area textarea,
+    .tab-content-edit-wrapepr .user-information .profile-change .profile-left .profile-image img {
         border-color: var(--color-border-white);
     }
 
@@ -380,8 +380,8 @@ body {
     .role-area input,
     .input-two-wrapper .phone-number input,
     .left-nav .nav.nav-tabs button i,
-    .tab-content-edit-wrapepr .nuron-information .profile-form-wrapper input,
-    .tab-content-edit-wrapepr .nuron-information .edit-bio-area textarea{
+    .tab-content-edit-wrapepr .user-information .profile-form-wrapper input,
+    .tab-content-edit-wrapepr .user-information .edit-bio-area textarea{
         color: var(--color-light-heading);
     }
 

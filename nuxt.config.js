@@ -15,15 +15,31 @@ export default {
     ],
     bodyAttrs: {
       class: 'template-color-1'
-    }
+    },
+    script: [
+      { src: '/js/jquery.js', body: true },
+      { src: '/js/jquery.nice-select.min.js', body: true },
+      { src: '/js/jquery-ui.js', body: true },
+      { src: '/js/feather.min.js', body: true },
+      { src: '/js/slick.min.js', body: true },
+      { src: '/js/bootstrap.min.js', body: true },
+      { src: '/js/sal.min.js', body: true },
+      { src: '/js/jquery.style.swicher.js', body: true },
+      { src: '/js/isotop.js', body: true },
+      { src: '/js/imageloaded.js', body: true },
+      { src: '/js/backtoTop.js', body: true },
+      { src: '/js/jquery-appear.js', body: true },
+      { src: '/js/scrolltrigger.js', body: true },
+      { src: '/js/savePopup.js', body: true },
+      { src: '/js/main.js', body: true },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/vendor/bootstrap.min.css',
-    '@/assets/css/vendor/nice-select.css',
-    '@/assets/css/plugins/feature.css',
-    '@/assets/scss/style.scss',
+    '~/assets/css/vendor/bootstrap.min.css',
+    '~/assets/css/plugins/feature.css',
+    '~/assets/scss/style.scss',
   ],
 
   axios: {
@@ -43,7 +59,11 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/composition-api'
+    '~/plugins/composition-api',
+  ],
+
+  pages: [
+    'pages/:route?'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

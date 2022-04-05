@@ -3,7 +3,9 @@
         <Header />
         <HeaderMobile />
         <PageTitle />
+        <Nuxt />
         <Footer />
+        <ToTop />
     </div>
 </template>
 
@@ -13,6 +15,7 @@ import Header from '~/components/header/header.vue'
 import HeaderMobile from '~/components/header/mobile-header.vue'
 import PageTitle from '~/components/page-title/title.vue'
 import Footer from '~/components/footer/footer.vue'
+import ToTop from '~/components/plugin/totop.vue'
 
 export default defineComponent({
     name: 'default-layout',
@@ -21,6 +24,7 @@ export default defineComponent({
         Header,
         HeaderMobile,
         PageTitle,
+        ToTop
     },
     setup () {
 
