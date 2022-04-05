@@ -11,9 +11,12 @@
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
-    "strict": true,
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
     "noEmit": true,
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "~/*": [
@@ -25,7 +28,8 @@
     },
     "types": [
       "@nuxt/types",
-      "@types/node"
+      "@types/node",
+      "@nuxtjs/axios"
     ]
   },
   "exclude": [

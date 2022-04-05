@@ -343,17 +343,40 @@
                 </div>
                 <!-- end single product -->
             </div>
+
+            <!-- start pagination -->
+            <div class="row rn-section-gapBottom">
+                <div class="col-lg-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
+                    <nav class="pagination-wrapper" aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- end pagination  -->
         </div>
     </div>
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api';
+import Vuex from "vuex";
+import { Actions } from "@/store/enums/StoreEnums";
 
 export default defineComponent({
     name: 'Page-Index',
     setup() {
-        
+        const imagePreviewUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
+        const url = 'pokemon';
+        const queryParams = {
+            limit: '30',
+            offset: ''
+        };
     },
 })
 </script>

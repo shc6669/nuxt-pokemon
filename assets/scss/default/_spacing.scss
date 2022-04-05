@@ -27,26 +27,24 @@
 }
 
 .rn-section-gapBottom {
-    padding-bottom: 100px;
-
+    padding-bottom: 80px;
     @media #{$md-layout} {
-        padding-bottom: 80px;
+        padding-bottom: 60px;
     }
-
     @media #{$sm-layout} {
-        padding-bottom: 80px;
+        padding-bottom: 60px;
     }
 }
 
 
 
 .rn-section-gapTop {
-    padding-top: 100px;
+    padding-top: 80px;
     @media #{$md-layout} {
-        padding-top: 80px;
+        padding-top: 60px;
     }
     @media #{$sm-layout} {
-        padding-top: 80px;
+        padding-top: 60px;
     }
 }
 
