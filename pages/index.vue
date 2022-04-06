@@ -364,14 +364,15 @@
 </template>
 
 <script>
-import { defineComponent, useFetch, useStore } from '@nuxtjs/composition-api';
+import { computed, defineComponent, useFetch, useStore, onMounted } from '@nuxtjs/composition-api';
 import { Actions } from "@/store/enums/StoreEnums"
+import { apiStore } from '~/store'
 
 export default defineComponent({
     name: 'Page-Index',
     setup() {
         const imagePreviewUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
-        const url = 'api/pokemon';
+        const url = '/api/pokemon';
         const queryParams = {
             limit: '30',
             offset: ''
@@ -379,11 +380,18 @@ export default defineComponent({
         
         // const store = useStore();
         // const pokemons = computed(() => {
-        //     return store.getters.allPokemons;
+        //     return apiStore.getters.allPokemons;
+        // });
+
+        // onMounted(() => {
+        //     apiStore.dispatch(Actions.GET_ALL_POKEMON, {
+        //         urlPage: url,
+        //         params: queryParams
+        //     });
         // });
 
         useFetch(async () => {
-            store.dispatch(Actions.GET_ALL_POKEMON, {
+            apiStore.dispatch(Actions.GET_ALL_POKEMON, {
                 urlPage: url,
                 params: queryParams
             })

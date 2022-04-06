@@ -31,8 +31,12 @@ export interface PokemonDetails {
     types: Array<string>;
 }
 
-@Module
-export default class ApiModule extends VuexModule {
+@Module({
+    name: 'apimodule',
+    stateFactory: true,
+    namespaced: true,
+})
+class ApiModule extends VuexModule {
     nextUrl = '';
     prevUrl = '';
     pokemons = {} as DataIndex;
@@ -73,6 +77,7 @@ export default class ApiModule extends VuexModule {
 
     @Action
     [Actions.GET_ALL_POKEMON](payload: any) {
+        console.log('this start');
         const { urlPage, params } = payload;
         return ApiService.queryAll(urlPage, {params})
         .then(({ data }) => {
@@ -118,3 +123,5 @@ export default class ApiModule extends VuexModule {
         this.pokemon = pokemon;
     }
 }
+
+export default ApiModule;

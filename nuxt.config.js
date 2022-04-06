@@ -48,7 +48,7 @@ export default {
   },
 
   proxy: {
-    '/api': {
+    '/api/': {
       target: 'https://pokeapi.co/api/v2/',
       pathRewrite: {
         '^/api/': ''
@@ -73,6 +73,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

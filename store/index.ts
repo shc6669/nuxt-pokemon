@@ -1,6 +1,5 @@
 import { Store } from 'vuex'
 import { initialiseStores } from '~/utils/store-accessor'
-import ApiModule from "~/store/modules/ApiModule"
 
 const initializer = (store: Store<any>) => initialiseStores(store)
 
