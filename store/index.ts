@@ -1,14 +1,8 @@
-import Vuex from "vuex";
-import { config } from "vuex-module-decorators"
+import { Store } from 'vuex'
+import { initialiseStores } from '~/utils/store-accessor'
+import ApiModule from "~/store/modules/ApiModule"
 
-import ApiModule from "@/store/modules/ApiModule"
+const initializer = (store: Store<any>) => initialiseStores(store)
 
-config.rawError = true;
-
-const store = new Vuex.Store({
-    modules: {
-        ApiModule
-    },
-});
-  
-// export default store;
+export const plugins = [initializer]
+export * from '~/utils/store-accessor'

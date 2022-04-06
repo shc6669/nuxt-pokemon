@@ -364,18 +364,52 @@
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api';
-import Vuex from "vuex";
-import { Actions } from "@/store/enums/StoreEnums";
+import { defineComponent, useFetch, useStore } from '@nuxtjs/composition-api';
+import { Actions } from "@/store/enums/StoreEnums"
 
 export default defineComponent({
     name: 'Page-Index',
     setup() {
         const imagePreviewUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
-        const url = 'pokemon';
+        const url = 'api/pokemon';
         const queryParams = {
             limit: '30',
             offset: ''
+        };
+        
+        // const store = useStore();
+        // const pokemons = computed(() => {
+        //     return store.getters.allPokemons;
+        // });
+
+        useFetch(async () => {
+            store.dispatch(Actions.GET_ALL_POKEMON, {
+                urlPage: url,
+                params: queryParams
+            })
+        })
+
+        // const nextButton = () => {
+        //     const nextUrl = store.getters.nextPokemons;
+        //     store.dispatch(Actions.GET_ALL_POKEMON, {
+        //         urlPage: nextUrl,
+        //         params: null
+        //     });
+        // }
+
+        // const previousButton = () => {
+        //     const prevUrl = store.getters.prevPokemons;
+        //     store.dispatch(Actions.GET_ALL_POKEMON, {
+        //         urlPage: prevUrl,
+        //         params: null
+        //     });
+        // }
+
+        return {
+            imagePreviewUrl,
+            // nextButton,
+            // pokemons,
+            // previousButton
         };
     },
 })
