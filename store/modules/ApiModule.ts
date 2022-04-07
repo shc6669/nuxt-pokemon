@@ -1,6 +1,7 @@
 import ApiService from "@/core/services/ApiService";
 import { Actions, Mutations } from "@/store/enums/StoreEnums";
 import { Module, Action, Mutation, VuexModule } from "vuex-module-decorators";
+import { $axios } from '~/utils/api'
 
 export interface DataIndex {
     count: string;
@@ -76,10 +77,11 @@ class ApiModule extends VuexModule {
     }
 
     @Action
-    [Actions.GET_ALL_POKEMON](payload: any) {
+    async [Actions.GET_ALL_POKEMON](payload: any) {
         console.log('this start');
         const { urlPage, params } = payload;
-        return ApiService.queryAll(urlPage, {params})
+        // return ApiService.queryAll(urlPage, {params})
+        return await $axios.$get(urlPage, {params})
         .then(({ data }) => {
             this.context.commit(Mutations.SET_VALUE_POKEMONS, data);
             const pokemons = data;
@@ -100,9 +102,10 @@ class ApiModule extends VuexModule {
     }
 
     @Action
-    [Actions.GET_DETAIL_POKEMON](payload: any) {
+    async [Actions.GET_DETAIL_POKEMON](payload: any) {
         const { pokemonId } = payload;
-        return ApiService.getDetail(this.urlPage, pokemonId)
+        // return ApiService.getDetail(this.urlPage, pokemonId)
+        return await $axios.$get(this.urlPage, pokemonId)
         .then(({ data }) => {
             this.context.commit(Mutations.SET_VALUE_POKEMON, data);
         })

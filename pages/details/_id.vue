@@ -1,5 +1,7 @@
 <template>
-    
+    <diiv>
+        THIS IS DETAIL PAGE
+    </diiv>
 </template>
 
 <script lang="ts">
