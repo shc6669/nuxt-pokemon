@@ -99,13 +99,13 @@
                                     <div class="tab-wrapper-one">
                                         <nav class="tab-button-one">
                                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false">Bids</button>
-                                                <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">Details</button>
-                                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">History</button>
+                                                <button class="nav-link" id="nav-stats-tab" data-bs-toggle="tab" data-bs-target="#nav-stats" type="button" role="tab" aria-controls="nav-stats" aria-selected="false">Stats</button>
+                                                <button class="nav-link active" id="nav-details-tab" data-bs-toggle="tab" data-bs-target="#nav-details" type="button" role="tab" aria-controls="nav-details" aria-selected="true">Details</button>
+                                                <button class="nav-link" id="nav-moves-tab" data-bs-toggle="tab" data-bs-target="#nav-moves" type="button" role="tab" aria-controls="nav-moves" aria-selected="false">Moves</button>
                                             </div>
                                         </nav>
                                         <div class="tab-content rn-bid-content" id="nav-tabContent">
-                                            <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                            <div class="tab-pane fade" id="nav-stats" role="tabpanel" aria-labelledby="nav-stats-tab">
                                                 <!-- single creator -->
                                                 <div class="top-seller-inner-one">
                                                     <div class="top-seller-wrapper">
@@ -197,7 +197,7 @@
                                                 </div>
                                                 <!-- single creator -->
                                             </div>
-                                            <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                            <div class="tab-pane fade show active" id="nav-details" role="tabpanel" aria-labelledby="nav-details-tab">
                                                 <!-- single -->
                                                 <div class="rn-pd-bd-wrapper">
                                                     <div class="top-seller-inner-one">
@@ -322,7 +322,7 @@
                                                 </div>
                                                 <!-- single -->
                                             </div>
-                                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                            <div class="tab-pane fade" id="nav-moves" role="tabpanel" aria-labelledby="nav-moves-tab">
                                                 <!-- single creator -->
                                                 <div class="top-seller-inner-one">
                                                     <div class="top-seller-wrapper">
