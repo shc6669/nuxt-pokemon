@@ -103,6 +103,7 @@ class ApiModule extends VuexModule {
 
     @Action
     async [Actions.GET_DETAIL_POKEMON](payload: any) {
+        console.log('this start');
         const { pokemonId } = payload;
         // return ApiService.getDetail(this.urlPage, pokemonId)
         return await $axios.$get(this.urlPage, pokemonId)

@@ -24,7 +24,7 @@
             </div>
 
             <!-- start pagination -->
-            <div class="row rn-section-gapBottom">
+            <!-- <div class="row rn-section-gapBottom">
                 <div class="col-lg-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
                     <nav class="pagination-wrapper" aria-label="Page navigation example">
                         <ul class="pagination">
@@ -33,9 +33,6 @@
                                     Previous
                                 </a>
                             </li>
-                            <!-- <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li> -->
                             <li class="page-item">
                                 <a class="page-link" href="#" v-if="pokemons.next" @click="nextButton">
                                     Next
@@ -44,7 +41,7 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
+            </div> -->
             <!-- end pagination  -->
         </div>
     </div>
@@ -58,12 +55,12 @@ import { createStore } from '~/store'
 export default defineComponent({
     name: 'Page-Index',
     setup() {
-        const imagePreviewUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
-        const url = '/api/pokemon?limit=30&offset=0';
-        
         const { $axios } = useContext();
         // const store = useStore();
         const pokemons = ref(null)
+        const imagePreviewUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
+        const url = '/api/pokemon?limit=30&offset=0';    
+    
         useFetch(async () => {
             pokemons.value = await $axios.$get(url)
             .then((pokemons) => {
