@@ -91,5 +91,6 @@ export default {
         type: 'javascript/auto',
       })
     },
-  }
+  },
+  target: 'static'
 }
