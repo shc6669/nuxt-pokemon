@@ -437,7 +437,7 @@
                 autoplaySpeed: 2000,
             });
 
-            $('.top-seller-slick-activation').slick({
+            $('.top-stats-slick-activation').slick({
                 infinite: true,
                 slidesToShow: 4,
                 slidesToScroll: 2,

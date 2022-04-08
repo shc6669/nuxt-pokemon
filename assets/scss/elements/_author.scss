@@ -190,7 +190,7 @@
     }
 }
 
-.top-seller-inner-one{
+.top-stats-inner-one{
     &.explore{
         border: 1px solid var(--background-color-1);
         border-radius: 5px;
@@ -199,7 +199,7 @@
         background: var(--background-color-1);
         transition: var(--transition);
         position: relative;
-        .top-seller-wrapper{
+        .top-stats-wrapper{
             .thumbnail{
                 max-width: 80px;
                 a {
@@ -213,7 +213,7 @@
         }
         &:hover{
             background: var(--color-primary-alta);
-            .top-seller-wrapper{
+            .top-stats-wrapper{
                 .thumbnail{
                     a {
                         img {

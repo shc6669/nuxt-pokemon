@@ -778,13 +778,13 @@
             @media #{$large-mobile} {
                 transform: none;
             }
-            .top-seller-wrapper{
+            .top-stats-wrapper{
                 @media #{$large-mobile} {
                     display: flex;
                     align-items: flex-start;
                     flex-direction: column;
                 }
-                .top-seller-content{
+                .top-stats-content{
                     @media #{$large-mobile} {
                         text-align: left;
                         margin-left: 0;

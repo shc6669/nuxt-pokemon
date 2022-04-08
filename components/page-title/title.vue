@@ -11,7 +11,7 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <ul class="breadcrumb-list">
                         <li class="item">
-                            <a href="#">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li class="separator">
                             <i class="feather-chevron-right"></i>

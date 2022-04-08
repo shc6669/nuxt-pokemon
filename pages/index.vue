@@ -62,7 +62,7 @@ export default defineComponent({
         // const store = useStore();
         const pokemons = ref(null)
         const imagePreviewUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
-        const url = '/api/pokemon?limit=30&offset=0';    
+        const url = '/api/pokemon?limit=100&offset=0';    
     
         useFetch(async () => {
             pokemons.value = await $axios.$get(url)

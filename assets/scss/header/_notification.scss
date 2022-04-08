@@ -210,7 +210,7 @@
 
 .rn-notification-wrapper {
     &.creators {
-        .top-seller-inner-one {
+        .top-stats-inner-one {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -232,7 +232,7 @@
                 }
             }
 
-            .top-seller-content {
+            .top-stats-content {
                 a {
                     h6 {
                         font-weight: 400;

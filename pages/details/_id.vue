@@ -5,7 +5,6 @@
                 <div class="container">
                     <div class="row g-5 rn-section-gapBottom">
                         <!-- product image area -->
-                        <!-- {{pokemon}} -->
                         <div class="col-lg-7 col-md-12 col-sm-12">
                             <div class="product-tab-wrapper rbt-sticky-top-adjust">
                                 <div class="pd-tab-inner">
@@ -62,8 +61,8 @@
                                 </h6>
                                 <div class="catagory-collection">
                                     <div class="catagory" v-for="(info, index) in pokemon.types" :key="index">
-                                        <div class="top-seller-inner-one">
-                                            <div class="top-seller-wrapper">
+                                        <div class="top-stats-inner-one">
+                                            <div class="top-stats-wrapper">
                                                 <div class="thumbnail">
                                                     <a href="#">
                                                         <img v-if="info.type.name === 'bug'" src="~/assets/images/icons/duotune/abstract/abs041.svg" alt="bug">
@@ -84,10 +83,10 @@
                                                         <img v-if="info.type.name === 'water'" src="~/assets/images/icons/duotune/abstract/abs017.svg" alt="water">
                                                     </a>
                                                 </div>
-                                                <div class="top-seller-content">
+                                                <div class="top-stats-content">
                                                     <a href="#">
                                                         <h6 class="name">
-                                                            {{ info.type.name }}
+                                                            {{ info.type.name.charAt(0).toUpperCase() + info.type.name.slice(1) }}
                                                         </h6>
                                                     </a>
                                                 </div>
@@ -106,298 +105,106 @@
                                         </nav>
                                         <div class="tab-content rn-bid-content" id="nav-tabContent">
                                             <div class="tab-pane fade" id="nav-stats" role="tabpanel" aria-labelledby="nav-stats-tab">
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one">
-                                                    <div class="top-seller-wrapper">
+                                                <!-- start stats tab -->
+                                                <div class="top-stats-inner-one" v-for="(state, i) in pokemon.stats" :key="i">
+                                                    <div class="top-stats-wrapper">
                                                         <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-3.png" alt="Nft_Profile"></a>
+                                                            <a href="#">
+                                                                <img src="~/assets/images/icons/duotune/abstract/abs052.svg" alt="stats-thumbnail">
+                                                            </a>
                                                         </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.11wETH by <a href="#">Allen Waltker</a></span>
+                                                        <div class="top-stats-content">
+                                                            <span>
+                                                                <a href="#">
+                                                                    {{ state.stat.name }}
+                                                                </a>
+                                                            </span>
                                                             <span class="count-number">
-                                                                1 hours ago
+                                                                {{ state.base_stat }}
                                                             </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-4.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.09wETH by <a href="#">Joe Biden</a></span>
-                                                            <span class="count-number">
-                                                                1.30 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-5.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.07wETH by <a href="#">Sonial mridha</a></span>
-                                                            <span class="count-number">
-                                                                1.35 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-6.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.07wETH by <a href="#">Tribute Dhusra</a></span>
-                                                            <span class="count-number">
-                                                                1.55 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-7.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.07wETH by <a href="#">Sonia Sobnom</a></span>
-                                                            <span class="count-number">
-                                                                2 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-8.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.02wETH by <a href="#">Sadia Rummon</a></span>
-                                                            <span class="count-number">
-                                                                2.5 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
+                                                <!-- end stats tab -->
                                             </div>
                                             <div class="tab-pane fade show active" id="nav-details" role="tabpanel" aria-labelledby="nav-details-tab">
-                                                <!-- single -->
+                                                <!-- start details tab -->
                                                 <div class="rn-pd-bd-wrapper">
-                                                    <div class="top-seller-inner-one">
-                                                        <!-- <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                                            elit. Doloribus debitis nemo deserunt.</p> -->
+                                                    <div class="top-stats-inner-one" v-if="pokemon.species">
                                                         <h6 class="name-title">
-                                                            Owner
+                                                            Species
                                                         </h6>
-                                                        <div class="top-seller-wrapper">
+                                                        <div class="top-stats-wrapper">
                                                             <div class="thumbnail">
-                                                                <a href="#"><img src="assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                                                            </div>
-                                                            <div class="top-seller-content">
                                                                 <a href="#">
-                                                                    <h6 class="name">Brodband</h6>
+                                                                    <img src="~/assets/images/icons/duotune/abstract/abs049.svg" alt="species">
+                                                                </a>
+                                                            </div>
+                                                            <div class="top-stats-content">
+                                                                <a href="#">
+                                                                    <h6 class="name">
+                                                                        {{pokemon.species.name.charAt(0).toUpperCase() + pokemon.species.name.slice(1)}}
+                                                                    </h6>
                                                                 </a>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- single -->
+                                                    <!-- start property -->
                                                     <div class="rn-pd-sm-property-wrapper">
                                                         <h6 class="pd-property-title">
                                                             Property
                                                         </h6>
                                                         <div class="property-wrapper">
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">HYPE TYPE</span>
-                                                                <span class="color-white value">CALM AF (STILL)</span>
+                                                            <!-- single property start -->
+                                                            <div class="pd-property-inner" v-if="pokemon.height">
+                                                                <span class="color-body type">HEIGHT</span>
+                                                                <span class="color-white value">{{pokemon.height}} (cm)</span>
                                                             </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">BASTARDNESS</span>
-                                                                <span class="color-white value">C00LIO BASTARD</span>
+                                                            <!-- single property end -->
+                                                            <!-- single property start -->
+                                                            <div class="pd-property-inner" v-if="pokemon.weight">
+                                                                <span class="color-body type">WEIGHT</span>
+                                                                <span class="color-white value">{{pokemon.weight}} (gram)</span>
                                                             </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">TYPE</span>
-                                                                <span class="color-white value">APE</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">ASTARDNESS</span>
-                                                                <span class="color-white value">BASTARD</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">BAD HABIT(S)</span>
-                                                                <span class="color-white value">PIPE</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">BID</span>
-                                                                <span class="color-white value">BPEYti</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">ASTRAGENAKAR</span>
-                                                                <span class="color-white value">BASTARD</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">CITY</span>
-                                                                <span class="color-white value">TOKYO</span>
-                                                            </div>
-                                                            <!-- single property End -->
+                                                            <!-- single property end -->
                                                         </div>
                                                     </div>
-                                                    <!-- single -->
-                                                    <!-- single -->
+                                                    <!-- end property  -->
+                                                    <!-- start abilities -->
                                                     <div class="rn-pd-sm-property-wrapper">
                                                         <h6 class="pd-property-title">
-                                                            Catagory
+                                                            Abilities
                                                         </h6>
                                                         <div class="catagory-wrapper">
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">ZARY</span>
-                                                                <span class="color-white value">APP</span>
+                                                            <div class="pd-property-inner" v-for="(list, index) in pokemon.abilities" :key="index">
+                                                                <span class="color-body type">ABILITY</span>
+                                                                <span class="color-white value">{{list.ability.name.charAt(0).toUpperCase() + list.ability.name.slice(1)}}</span>
                                                             </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">SOMALIAN</span>
-                                                                <span class="color-white value">TRIBUTE</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">TUNA</span>
-                                                                <span class="color-white value">PIPE</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">BID</span>
-                                                                <span class="color-white value">BPEYti</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">ASTRAGENAKAR</span>
-                                                                <span class="color-white value">BASTARD</span>
-                                                            </div>
-                                                            <!-- single property End -->
-                                                            <!-- single property -->
-                                                            <div class="pd-property-inner">
-                                                                <span class="color-body type">CITY</span>
-                                                                <span class="color-white value">TOKYO</span>
-                                                            </div>
-                                                            <!-- single property End -->
                                                         </div>
                                                     </div>
-                                                    <!-- single -->
+                                                    <!-- end abilities -->
                                                 </div>
-                                                <!-- single -->
+                                                <!-- end details tab -->
                                             </div>
                                             <div class="tab-pane fade" id="nav-moves" role="tabpanel" aria-labelledby="nav-moves-tab">
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one">
-                                                    <div class="top-seller-wrapper">
+                                                <!-- start moves tab -->
+                                                <div class="top-stats-inner-one" v-for="(move, i) in pokemon.moves" :key="i">
+                                                    <div class="top-stats-wrapper">
                                                         <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-3.png" alt="Nft_Profile"></a>
+                                                            <a href="#">
+                                                                <img src="~/assets/images/icons/duotune/abstract/abs051.svg" alt="moves-thumbnail">
+                                                            </a>
                                                         </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.11wETH by<a href="#">Allen Waltker</a></span>
-                                                            <span class="count-number">
-                                                                1 hours ago
+                                                        <div class="top-stats-content">
+                                                            <span>
+                                                                <a href="#">
+                                                                    {{ move.move.name }}
+                                                                </a>
                                                             </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one mt--20">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-2.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.11wETH by<a href="#">Allen Waltker</a></span>
-                                                            <span class="count-number">
-                                                                1 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one mt--20">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-4.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.11wETH by<a href="#">Allen Waltker</a></span>
-                                                            <span class="count-number">
-                                                                1 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one mt--20">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-5.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.11wETH by<a href="#">Allen Waltker</a></span>
-                                                            <span class="count-number">
-                                                                1 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
-                                                <!-- single creator -->
-                                                <div class="top-seller-inner-one mt--20">
-                                                    <div class="top-seller-wrapper">
-                                                        <div class="thumbnail">
-                                                            <a href="#"><img src="assets/images/client/client-8.png" alt="Nft_Profile"></a>
-                                                        </div>
-                                                        <div class="top-seller-content">
-                                                            <span>0.11wETH by<a href="#">Allen Waltker</a></span>
-                                                            <span class="count-number">
-                                                                1 hours ago
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- single creator -->
+                                                <!-- end moves tab -->
                                             </div>
                                         </div>
                                     </div>

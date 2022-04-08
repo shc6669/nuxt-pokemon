@@ -17,7 +17,7 @@
                             <!-- Start Mainmanu Nav -->
                             <ul class="mainmenu">
                                 <li>
-                                    <a>
+                                    <a href="/">
                                         Dashboard
                                     </a>
                                 </li>

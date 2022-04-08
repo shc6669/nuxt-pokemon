@@ -1,4 +1,4 @@
-.rn-top-top-seller-area {
+.rn-top-top-stats-area {
     h3 {
         &.title {
             margin-right: 10px;
@@ -49,8 +49,8 @@
     }
 }
 
-.top-seller-inner-one {
-    .top-seller-wrapper {
+.top-stats-inner-one {
+    .top-stats-wrapper {
         display: flex;
         align-items: center;
         @media #{$small-mobile} {
@@ -74,7 +74,7 @@
                 }
             }
         }
-        .top-seller-content {
+        .top-stats-content {
             margin-left: 12px;
 
             @media #{$small-mobile} {
@@ -257,9 +257,9 @@
     }
 }
 
-.top-seller-list-wrapper {
+.top-stats-list-wrapper {
     counter-reset: rn-list-counter;
-    .top-seller-list {
+    .top-stats-list {
         counter-increment: rn-list-counter;
         position: relative;
         &::before {

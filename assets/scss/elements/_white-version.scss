@@ -49,14 +49,14 @@ body {
     .color-body,
     .tab-button-one .nav-tabs button,
     ol li,
-    .rn-pd-bd-wrapper .top-seller-inner-one h6.name-title,
+    .rn-pd-bd-wrapper .top-stats-inner-one h6.name-title,
     .rn-pd-sm-property-wrapper h6.pd-property-title,
     .rn-pd-sm-slick .pd-slide-wrapper .rn-pd-slick .rn-pd-pric span,
     .widge-tag .tag-wrapper a.badge,
     .widge-social .social-share-list li a svg,
     .popup-mobile-menu .mainmenu li a,
     .hamberger button.hamberger-button,
-    .top-seller-list-wrapper .top-seller-list::before,
+    .top-stats-list-wrapper .top-stats-list::before,
     .creator-list-wrapper .creator-single::before,
     .maintanence-area .inner .content p,
     .rbt-single-widget.widget_categories ul li span,
@@ -110,7 +110,7 @@ body {
     .author-wrapper .author-inner .rn-author-info-content .social-follw .user-name,
     .author-wrapper .author-inner .rn-author-info-content .follow-area .follow span ,
     .wallet-wrapper .inner .content .title,
-    .top-seller-inner-one .top-seller-wrapper .top-seller-content span a,
+    .top-stats-inner-one .top-stats-wrapper .top-stats-content span a,
     .popup-mobile-menu .inner .header-top .close-menu .close-button,
     .banner-style-4 .sldier-content .title,
     .slider-style-5 .banner-left-content .title,
@@ -253,7 +253,7 @@ body {
     .widget-content-wrapper .widget-bottom,
     .rn-icon-list.user-account .rn-dropdown .add-fund-button,
     .single-notice .thumbnail a img,
-    .top-seller-inner-one .top-seller-wrapper .thumbnail a img,
+    .top-stats-inner-one .top-stats-wrapper .thumbnail a img,
     .right-fix-notice,
     .single-notice,
     .rn-header,
@@ -265,7 +265,7 @@ body {
     .default-exp-wrapper,
     .rn-breadcrumb-inner,
     .share-btn-activation .share-btn-setting .btn-setting-text + .btn-setting-text,
-    .top-seller-inner-one .top-seller-wrapper .thumbnail a,
+    .top-stats-inner-one .top-stats-wrapper .thumbnail a,
     .title-badge,
     .tagcloud a ,
     .rn-icon-list .icon-box > a, .rn-icon-list .icon-box > button,
@@ -437,16 +437,16 @@ body {
             .left-bid h6{
                 color: var(--color-white);
             }
-            .winning-bid .top-seller-content .heighest-bid{
+            .winning-bid .top-stats-content .heighest-bid{
                 color: #adadad;
                 a{
                     color: var(--color-white);
                 }
             }
             .bid-list{
-                .top-seller-inner-one{
-                    .top-seller-wrapper{
-                        .top-seller-content{
+                .top-stats-inner-one{
+                    .top-stats-wrapper{
+                        .top-stats-content{
                             .count-number{
                                 color: var(--color-body);
                             }
@@ -1077,7 +1077,7 @@ body {
 
 
     // creator
-    .top-seller-inner-one {
+    .top-stats-inner-one {
         &.explore {
             background: var(--color-white);
             border: 1px solid transparent;
